@@ -26,8 +26,9 @@ public class SavingsAccount {
 	}
 	
 	public double calculateMonthlyInterest() {
-		double monthlyInterest = savingsBalance * (annualInterestRate / 100) / 12;
-		savingsBalance = (savingsBalance + monthlyInterest);
+		double monthlyInterest = savingsBalance * (annualInterestRate / 100)/ 12;
+		savingsBalance = savingsBalance + monthlyInterest;
+		display(monthlyInterest);
 		return savingsBalance;
 	}
 	
