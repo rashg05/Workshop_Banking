@@ -5,8 +5,7 @@ public class SavingsAccount {
 	
 	private double savingsBalance;
 
-	public SavingsAccount(double rate, double savingsBalance) {
-		this.annualInterestRate = rate;
+	public SavingsAccount(double savingsBalance) {
 		this.savingsBalance = savingsBalance;
 	}
 	
@@ -28,7 +27,7 @@ public class SavingsAccount {
 	
 	public double calculateMonthlyInterest() {
 		double monthlyInterest = savingsBalance * (annualInterestRate / 100) / 12;
-		savingsBalance = savingsBalance + monthlyInterest;
+		savingsBalance = (savingsBalance + monthlyInterest);
 		return savingsBalance;
 	}
 	
@@ -38,7 +37,7 @@ public class SavingsAccount {
 		System.out.println("Saving Balance: " + savingsBalance);
 	}
 	
-	public static void modifyInterestRate(double newInterestRate) {
+	public static void modifyInterestRate(int newInterestRate) {
 		annualInterestRate = newInterestRate;
 	}
 	
